@@ -1,0 +1,19 @@
+@import "styles/variable";
+
+.root {
+  padding: 25px;
+
+  ul {
+    padding: 20px 0;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }
+
+  p {
+    width: 500px;
+    // padding-right: 300px;
+    margin-bottom: 30px;
+  }
+}
