@@ -1,4 +1,4 @@
-import styles from "./grab-scroll.module.scss";
+import styles from "./grab-scroll-y.module.scss";
 import React, { useRef, useEffect } from "react";
 
 export default function GrabScroll(): React.ReactElement {
