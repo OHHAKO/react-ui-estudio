@@ -25,6 +25,9 @@ export default function Parent(): React.ReactElement {
       <h1>IEEE &apos;Code of Ethics&apos;</h1>
       <h3>PREAMBLE </h3>
       <div>
+        <div className={`${styles.sticky_wrapper} ${isSticky ? styles.sticky : ""}`} ref={ref}>
+          sticky가 적용된 블럭 내부 컨텐츠
+        </div>
         <p>
           The short version of the code summarizes aspirations at a high level of the abstraction;
           the clauses that are included in the full version give examples and details of how these
@@ -67,9 +70,6 @@ export default function Parent(): React.ReactElement {
             the profession.
           </li>
         </ul>
-      </div>
-      <div className={`${styles.sticky_wrapper} ${isSticky ? styles.sticky : ""}`} ref={ref}>
-        sticky가 적용된 블럭 내부 컨텐츠
       </div>
 
       <div>
