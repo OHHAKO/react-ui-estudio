@@ -5,3 +5,26 @@
   background: pink;
   cursor: grab;
 }
+
+.containerX {
+  display: flex;
+  overflow: auto;
+  width: 500px;
+  height: 500px;
+  padding: 16px;
+  background: pink;
+  cursor: grab;
+  font-size: 15px;
+
+  & > :first-child {
+    color: red;
+  }
+
+  & > :last-child {
+    color: hotpink;
+  }
+
+  ul {
+    padding: 0 16px 16px;
+  }
+}
