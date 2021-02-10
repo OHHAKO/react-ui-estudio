@@ -34,23 +34,28 @@ export default function Filter(): React.ReactElement {
   return (
     <div className={styles.root}>
       <h1> 필터 구현</h1>
-      {griffindors.map((stu, i) => (
-        <li key={i}>{stu.name}</li>
-      ))}
-      <br /> <br />
-      <h1>셀렉박스를 이용한 필터 구현</h1>
-      <select onChange={(e) => setDorm(e.currentTarget.value)}>
-        <option>All</option>
-        <option>Gryffindor</option>
-        <option>Ravenclaw</option>
-        <option>Hufflepuf</option>
-        <option>Slytherin</option>
-      </select>
-      {students
-        .filter((stu) => (dorm === "All" ? true : stu.dorm === dorm))
-        .map((stu, i) => (
+      <ul>
+        {griffindors.map((stu, i) => (
           <li key={i}>{stu.name}</li>
         ))}
+      </ul>
+      <h1>
+        셀렉박스를 이용한 필터 구현
+        <select onChange={(e) => setDorm(e.currentTarget.value)}>
+          <option>All</option>
+          <option>Gryffindor</option>
+          <option>Ravenclaw</option>
+          <option>Hufflepuf</option>
+          <option>Slytherin</option>
+        </select>
+      </h1>
+      <ul>
+        {students
+          .filter((stu) => (dorm === "All" ? true : stu.dorm === dorm))
+          .map((stu, i) => (
+            <li key={i}>{stu.name}</li>
+          ))}
+      </ul>
     </div>
   );
 }
