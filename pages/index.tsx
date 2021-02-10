@@ -27,6 +27,9 @@ export default function Home(): React.ReactElement {
           <li>
             <Link href="/grab-scroll-x">grabbing scrollX </Link>
           </li>
+          <li>
+            <Link href="/filter">filter</Link>
+          </li>
         </ul>
       </div>
     </>

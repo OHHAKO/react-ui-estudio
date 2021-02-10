@@ -1,13 +1,9 @@
 // eslint-disable-next-line css-modules/no-unused-class
 import styles from "./grab-scroll-y.module.scss";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 
 export default function GrabScroll(): React.ReactElement {
   const container = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    container.current.scrollTop = 5;
-  }, []);
 
   let pos = { left: 0, x: 0 };
 
