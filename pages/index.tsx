@@ -30,6 +30,9 @@ export default function Home(): React.ReactElement {
           <li>
             <Link href="/filter">filter</Link>
           </li>
+          <li>
+            <Link href="/filter-class">filter(Class component)</Link>
+          </li>
         </ul>
       </div>
     </>

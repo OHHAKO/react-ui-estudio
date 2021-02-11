@@ -43,7 +43,9 @@ class Filter extends React.Component<null, { dorm: string; dormitory: string }> 
         <h1> 필터 구현</h1>
         <ul>
           {griffindors.map((stu, i) => (
-            <li key={i}>{stu.name}</li>
+            <li key={i}>
+              {stu.name} (기숙사: {stu.dorm})
+            </li>
           ))}
         </ul>
         <h1>
@@ -60,7 +62,9 @@ class Filter extends React.Component<null, { dorm: string; dormitory: string }> 
           {students
             .filter((stu) => (this.state.dorm === "All" ? true : stu.dorm === this.state.dorm))
             .map((stu, i) => (
-              <li key={i}>{stu.name}</li>
+              <li key={i}>
+                {stu.name} (기숙사: {stu.dorm})
+              </li>
             ))}
         </ul>
 
