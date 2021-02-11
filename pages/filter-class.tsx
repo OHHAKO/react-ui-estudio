@@ -26,11 +26,15 @@ const students = [
 
 const griffindors = students.filter((stu) => stu.dorm === "Gryffindor");
 
-class Filter extends React.Component<null, { dorm: string }> {
+class Filter extends React.Component<null, { dorm: string; dormitory: string }> {
   constructor(props) {
     super(props);
-    this.state = { dorm: "All" };
+    this.state = { dorm: "All", dormitory: "All" };
   }
+
+  handleInput = (e) => {
+    this.setState({ dormitory: e.target.value });
+  };
 
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   render() {
@@ -44,7 +48,7 @@ class Filter extends React.Component<null, { dorm: string }> {
         </ul>
         <h1>
           셀렉박스를 이용한 필터 구현
-          <select onChange={(e) => this.setState({ dorm: e.currentTarget.value })}>
+          <select onChange={(e) => this.setState({ dorm: e.target.value })}>
             <option>All</option>
             <option>Gryffindor</option>
             <option>Ravenclaw</option>
@@ -55,6 +59,18 @@ class Filter extends React.Component<null, { dorm: string }> {
         <ul>
           {students
             .filter((stu) => (this.state.dorm === "All" ? true : stu.dorm === this.state.dorm))
+            .map((stu, i) => (
+              <li key={i}>{stu.name}</li>
+            ))}
+        </ul>
+
+        <h1>
+          input text를 이용한 필터 구현
+          <input type="text" onChange={this.handleInput}></input>
+        </h1>
+        <ul>
+          {students
+            .filter((stu) => stu.dorm === this.state.dormitory)
             .map((stu, i) => (
               <li key={i}>{stu.name}</li>
             ))}
