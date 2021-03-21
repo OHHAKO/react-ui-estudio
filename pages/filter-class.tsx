@@ -1,6 +1,5 @@
 import styles from "./filter.module.scss";
-import StudentsComp from "../components/StudentsComp";
-import StudentsComp2 from "../components/StudentsComp2";
+import HogwartsStudents from "../components/HogwartsStudents";
 import React from "react";
 
 class Filter extends React.Component<null, { dorm: string; dormitory: string }> {
@@ -42,7 +41,7 @@ class Filter extends React.Component<null, { dorm: string; dormitory: string }> 
 
     return (
       <div className={styles.root}>
-        <h1> 필터 구현</h1>
+        <h1> griffindors 학생</h1>
         <ul>
           {griffindors.map((stu, i) => (
             <li key={i}>
@@ -50,12 +49,11 @@ class Filter extends React.Component<null, { dorm: string; dormitory: string }> 
             </li>
           ))}
         </ul>
-
-        <input type="text" onChange={this.handleInput}></input>
-
-        <StudentsComp dormitory={this.state.dormitory} students={students} />
-
-        <StudentsComp2 dormitory={this.state.dormitory} students={students} />
+        <h1>입력값을 이용한 필터 동작</h1>
+        <h2>
+          기숙사를 입력하세요 <input type="text" onChange={this.handleInput} />
+        </h2>
+        <HogwartsStudents dormitory={this.state.dormitory} students={students} />
       </div>
     );
   }

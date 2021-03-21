@@ -1,14 +1,14 @@
 import React from "react";
 
-class StudentsComp extends React.Component<null, { dormitory: string; students: any[] }> {
-  constructor(props) {
-    super(props);
-  }
+type Props = {
+  dormitory: string;
+  students: any[];
+};
 
+class StudentsComp extends React.Component<Props> {
   render() {
     return (
       <>
-        <h1>셀렉박스를 이용한 필터 구현</h1>
         <ul>
           {this.props.students
             .filter((stu) =>
