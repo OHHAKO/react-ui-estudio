@@ -9,7 +9,6 @@ export default function Parent(): React.ReactElement {
   const handleScroll = () => {
     const gap = 55;
     if (ref.current && ref.current.getBoundingClientRect().top <= gap) setSticky(true);
-    console.log(ref.current.getBoundingClientRect().top);
   };
 
   useEffect(() => {

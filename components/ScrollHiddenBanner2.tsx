@@ -18,7 +18,6 @@ export default function Parent(): React.ReactElement {
     window.addEventListener("scroll", handleScroll);
 
     const interval = setInterval(() => {
-      console.log("time");
       if (isStop == true && ref.current) {
         ref.current.style.display = "block";
       }

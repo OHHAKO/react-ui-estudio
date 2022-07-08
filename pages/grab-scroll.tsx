@@ -1,4 +1,3 @@
-import styles from "./grab-scroll.module.scss";
 import React, { useRef, useEffect } from "react";
 
 export default function GrabScroll(): React.ReactElement {
@@ -46,7 +45,13 @@ export default function GrabScroll(): React.ReactElement {
     <>
       <div
         ref={container}
-        className={styles.container}
+        style={{
+          overflow: "auto",
+          width: "200px",
+          height: "300px",
+          background: "red",
+          cursor: "grab",
+        }}
         onMouseDown={(event: React.MouseEvent<HTMLElement>) => mouseDownHandler(event)}
       >
         <p>
