@@ -1,3 +1,4 @@
+// eslint-disable-next-line css-modules/no-unused-class
 import styles from "./grab-scroll-y.module.scss";
 import React, { useRef, useEffect } from "react";
 
@@ -17,6 +18,8 @@ export default function GrabScroll(): React.ReactElement {
   };
 
   const mouseUpHandler = function () {
+    if (!container.current) return;
+
     container.current.style.cursor = "grab";
     container.current.style.removeProperty("user-select");
 
@@ -29,6 +32,7 @@ export default function GrabScroll(): React.ReactElement {
       y: e.clientY,
     };
 
+    if (!container.current) return;
     container.current.style.cursor = "grabbing";
     container.current.style.userSelect = "none"; //뭐지
 

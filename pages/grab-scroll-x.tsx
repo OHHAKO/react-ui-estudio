@@ -14,6 +14,7 @@ export default function GrabScroll(): React.ReactElement {
   };
 
   const mouseUpHandler = function () {
+    if (!container.current) return;
     container.current.style.cursor = "grab";
     container.current.style.removeProperty("user-select");
 
