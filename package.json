@@ -26,7 +26,7 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "author": "stayjungle.office@gmail.com",
+  "author": "l36h7129@gmail.com",
   "license": "ISC",
   "dependencies": {
     "next": "^10.0.1",
