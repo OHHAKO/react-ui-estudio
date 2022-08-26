@@ -7,4 +7,10 @@ $blue: #4254fb;
 $white: #fff;
 $gray: #898989;
 
-/* Text-size styles */
+$green: #189915;
+$deep-green: #178b14;
+
+:export {
+  deepgreen: $deep-green;
+  green: $green;
+}

@@ -1,5 +1,5 @@
 import styles from "./scroll-sticky.module.scss";
-
+import img from "../public/assets/code.jpg";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Parent(): React.ReactElement {
@@ -25,7 +25,8 @@ export default function Parent(): React.ReactElement {
       <h3>PREAMBLE </h3>
       <div>
         <div className={`${styles.sticky_wrapper} ${isSticky ? styles.sticky : ""}`} ref={ref}>
-          sticky가 적용된 블럭 내부 컨텐츠
+          {/* sticky가 적용된 블럭 내부 컨텐츠 */}
+          <img src={img} width="100%" />
         </div>
         <p>
           The short version of the code summarizes aspirations at a high level of the abstraction;
@@ -38,7 +39,7 @@ export default function Parent(): React.ReactElement {
           respected profession. In accordance with their commitment to the health, safety and
           welfare of the public, software engineers shall adhere to the following Eight Principles:
         </p>
-        <ul>
+        <ul className={styles.list}>
           <li>1. PUBLIC – Software engineers shall act consistently with the public interest.</li>
           <li>
             2. CLIENT AND EMPLOYER – Software engineers shall act in a manner that is in the best

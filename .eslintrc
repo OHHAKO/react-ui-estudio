@@ -15,7 +15,8 @@
       "typescript": {
         "alwaysTryTypes": true
       }
-    }
+    },
+    "import/ignore": [".css$", ".scss", "node_modules/*"]
   },
   "env": {
     "browser": true,
@@ -32,17 +33,9 @@
     "plugin:css-modules/recommended"
   ],
   "ignorePatterns": ".next/",
-  "plugins": [
-    "@typescript-eslint",
-    "import",
-    "react-hooks",
-    "css-modules"
-  ],
+  "plugins": ["@typescript-eslint", "import", "react-hooks", "css-modules"],
   "rules": {
-    "semi": [
-      "error",
-      "always"
-    ],
+    "semi": ["error", "always"],
     "import/no-named-as-default-member": "off",
     "import/namespace": "off",
     "import/order": [
@@ -52,15 +45,7 @@
           "order": "asc",
           "caseInsensitive": true
         },
-        "groups": [
-          "index",
-          "sibling",
-          "parent",
-          "internal",
-          "external",
-          "builtin",
-          "object"
-        ]
+        "groups": ["index", "sibling", "parent", "internal", "external", "builtin", "object"]
       }
     ],
     "jsx-a11y/label-has-associated-control": "off",
