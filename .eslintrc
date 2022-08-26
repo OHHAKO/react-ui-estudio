@@ -32,7 +32,7 @@
     "prettier/@typescript-eslint",
     "plugin:css-modules/recommended"
   ],
-  "ignorePatterns": [".next/"],
+  "ignorePatterns": ".next/",
   "plugins": ["@typescript-eslint", "import", "react-hooks", "css-modules"],
   "rules": {
     "semi": ["error", "always"],
