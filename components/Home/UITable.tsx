@@ -2,34 +2,44 @@ import styles from "./UITable.module.scss";
 import Link from "next/link";
 import React from "react";
 
+const UI_ITEM = [
+  { title: "Types of charts", link: "chart" },
+  {
+    title: "Sticky banner",
+    link: "scroll-sticky",
+  },
+  {
+    title: "Hidden banner on scrolling",
+    link: "scroll-hidden",
+  },
+  {
+    title: "Grabbing scrollY",
+    link: "grab-scroll-y",
+  },
+  {
+    title: "Grabbing scrollX",
+    link: "grab-scroll-x",
+  },
+  {
+    title: "Filter Data",
+    link: "filter",
+  },
+  {
+    title: "Filter Data(Class component)",
+    link: "filter-class",
+  },
+];
+
 export default function UITable(): React.ReactElement {
   return (
     <section className={styles.section}>
-      <div>
-        <ul>
-          <li>
-            <Link href="/chart">Types of charts</Link>
+      <ul>
+        {UI_ITEM.map((item) => (
+          <li key={item.link}>
+            <Link href={"/" + item.link}>{item.title}</Link>
           </li>
-          <li>
-            <Link href="/scroll-sticky">sticky banner </Link>
-          </li>
-          <li>
-            <Link href="/scroll-hidden">hidden banner on scrolling </Link>
-          </li>
-          <li>
-            <Link href="/grab-scroll-y">grabbing scroll </Link>
-          </li>
-          <li>
-            <Link href="/grab-scroll-x">grabbing scrollX </Link>
-          </li>
-          <li>
-            <Link href="/filter">filter</Link>
-          </li>
-          <li>
-            <Link href="/filter-class">filter(Class component)</Link>
-          </li>
-        </ul>
-      </div>
+        ))}
+      </ul>
     </section>
   );
 }

@@ -1,19 +1,17 @@
 .section {
-  div {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 66px 32px;
-    background-color: #377ab5;
-    background-image: url("/assets/beluga.png");
-    background-repeat: repeat-x repeat-y;
-    background-size: 180px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 66px 32px;
+  background-color: #377ab5;
+  background-image: url("/assets/beluga.png");
+  background-repeat: repeat-x repeat-y;
+  background-size: 180px;
 
-    @media screen and (min-width: 768px) {
-      background-size: 300px;
-    }
+  @media screen and (min-width: 768px) {
+    background-size: 300px;
   }
 
   ul {
