@@ -1,18 +1,26 @@
 .section {
-  background-color: #377ab5;
-
   div {
     display: flex;
+    width: 100%;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 122px;
+    padding: 66px 32px;
+    background-color: #377ab5;
     background-image: url("/assets/beluga.png");
     background-repeat: repeat-x repeat-y;
-    background-size: 300px;
+    background-size: 180px;
+
+    @media screen and (min-width: 768px) {
+      background-size: 300px;
+    }
   }
 
   ul {
-    padding: 32px 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 768px;
+    padding: 0;
     border: 3px solid white;
     margin: 0;
     background-color: rgba(100, 100, 100, 0.5);
@@ -21,15 +29,21 @@
   }
 
   li {
-    padding-bottom: 4px;
-    color: white;
-    font-size: 20px;
-    letter-spacing: 1.8px;
-    text-align: center;
-  }
+    padding: 0;
 
-  li:hover {
-    color: rgb(185, 37, 116);
-    text-decoration-line: underline;
+    a {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 1.8px;
+      text-align: center;
+    }
+
+    a:hover {
+      background-color: rgb(185, 37, 116, 0.5);
+      text-decoration-line: underline;
+    }
   }
 }
