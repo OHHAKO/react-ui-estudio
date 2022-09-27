@@ -14,15 +14,16 @@ export default function Layout({ children }: Props): React.ReactElement {
     <>
       <Head>
         <title>Hako Frontend Boilerplate</title>
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/assets/pallas.png" />
       </Head>
 
       <header className={styles.header}>
         <h1 className={styles.title}>
-          User interface estudio <span className={styles.author}>by Hako</span>
+          <Link href="/">User interface estudio</Link>
         </h1>
         <div className={styles.imgWrapper}>
-          <Image src={manul} alt="picture" width={250} height={180} />
+          <Image src={manul} alt="picture" width={120} height={80} />
+          <span className={styles.author}>by Hako</span>
         </div>
       </header>
 
@@ -31,13 +32,19 @@ export default function Layout({ children }: Props): React.ReactElement {
       <footer className={styles.footer}>
         <ul>
           <li>
-            <Link href="https://github.com/OHHAKO">Git</Link>
+            <a href="https://github.com/OHHAKO" target="__blank">
+              Git
+            </a>
           </li>
           <li>
-            <Link href="https://medium.com/@khk0503">Medium</Link>
+            <a href="https://medium.com/@khk0503" target="__blank">
+              Medium
+            </a>
           </li>
           <li>
-            <Link href="https://instagram.com/kimhrkeon?igshid=YmMyMTA2M2Y=">Insta</Link>
+            <a href="https://instagram.com/kimhrkeon?igshid=YmMyMTA2M2Y=" target="__blank">
+              Instagram
+            </a>
           </li>
         </ul>
       </footer>

@@ -1,57 +1,68 @@
 .header {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  padding-top: 32px;
-  border: 1px solid black;
-  margin-bottom: 50px;
+  justify-content: center;
+  padding: 32px 0;
 
   .title {
     padding: 6px 16px;
     margin-bottom: 4px;
     background-color: white;
     border-radius: 8px;
-    font-size: 54px;
+    font-size: 24px;
     font-weight: bold;
     letter-spacing: 1.8px;
     line-height: 1.4em;
+    text-align: center;
 
     .author {
       font-size: 16px;
     }
 
-    @media screen and (max-width: 420px) {
-      font-size: 28px;
+    @media screen and (min-width: 768px) {
+      font-size: 48px;
     }
   }
 
   .imgWrapper {
-    position: absolute;
-    bottom: -180px;
-    left: calc(50% - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      margin-top: -5px;
+      margin-right: 16px;
+    }
   }
 }
 
 .footer {
+  padding: 32px;
+
   ul {
     flex-direction: row;
     padding: 0;
     list-style: none;
 
-    li:hover {
-      background: white;
-      color: black;
-    }
-
     li {
       display: inline;
-      padding: 4px 12px;
+      padding: 4px 12px 6px;
       margin: 0 4px 0 0;
       background: black;
       border-radius: 7px;
-      color: white;
-      letter-spacing: 2.1px;
+
+      a {
+        color: white;
+        letter-spacing: 2.1px;
+        line-height: 1.7px;
+      }
+    }
+
+    li:hover {
+      background: rgba(0, 0, 0, 0.6);
     }
   }
 }
