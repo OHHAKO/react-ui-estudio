@@ -10,36 +10,6 @@
   overflow-y: hidden;
 }
 
-.header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 32px;
-  margin-bottom: 50px;
-
-  .title {
-    padding: 6px 16px;
-    margin-bottom: 4px;
-    background-color: white;
-    border-radius: 8px;
-    font-size: 54px;
-    font-weight: bold;
-    letter-spacing: 1.8px;
-    line-height: 1.4em;
-
-    @media screen and (max-width: 420px) {
-      font-size: 28px;
-    }
-  }
-
-  .imgWrapper {
-    position: absolute;
-    bottom: -180px;
-    left: calc(50% - 100px);
-  }
-}
-
 .body {
   padding: 92px 16px;
   border: 3px solid white;
@@ -62,28 +32,5 @@
   li:hover {
     color: rgb(185, 37, 116);
     text-decoration-line: underline;
-  }
-}
-
-.footer {
-  ul {
-    flex-direction: row;
-    padding: 0;
-    list-style: none;
-
-    li:hover {
-      background: white;
-      color: black;
-    }
-
-    li {
-      display: inline;
-      padding: 4px 12px;
-      margin: 0 4px 0 0;
-      background: black;
-      border-radius: 7px;
-      color: white;
-      letter-spacing: 2.1px;
-    }
   }
 }
