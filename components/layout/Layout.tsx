@@ -18,13 +18,22 @@ export default function Layout({ children }: Props): React.ReactElement {
       </Head>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>
-          <Link href="/">User interface estudio</Link>
-        </h1>
-        <div className={styles.imgWrapper}>
-          <Image src={manul} alt="picture" width={120} height={80} />
-          <span className={styles.author}>by Hako</span>
+        <div className={styles.titleWrapper}>
+          <h1 className={styles.title}>
+            <Link href="/">User Interface Estudio</Link>
+          </h1>
+          <div className={styles.imgWrapper}>
+            <Image src={manul} alt="picture" width={120} height={80} />
+            <span className={styles.author}>by Hako</span>
+          </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 1440 220">
+          <path
+            fill="black"
+            fillOpacity="1"
+            d="M0,96L120,117.3C240,139,480,181,720,186.7C960,192,1200,160,1320,144L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+          ></path>
+        </svg>
       </header>
 
       <main>{children}</main>
