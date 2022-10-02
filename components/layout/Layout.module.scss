@@ -1,21 +1,26 @@
 .header {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 0;
+  .titleWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0);
+    color: white;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 40px;
+    }
+  }
 
   .title {
     padding: 6px 16px;
     margin-bottom: 4px;
-    background-color: white;
     border-radius: 8px;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1.8px;
-    line-height: 1.4em;
     text-align: center;
 
     .author {
@@ -23,7 +28,7 @@
     }
 
     @media screen and (min-width: 768px) {
-      font-size: 48px;
+      font-size: 40px;
     }
   }
 
@@ -37,32 +42,8 @@
       margin-right: 16px;
     }
   }
-}
 
-.footer {
-  padding: 32px;
-
-  ul {
-    flex-direction: row;
-    padding: 0;
-    list-style: none;
-
-    li {
-      display: inline;
-      padding: 4px 12px 6px;
-      margin: 0 4px 0 0;
-      background: black;
-      border-radius: 7px;
-
-      a {
-        color: white;
-        letter-spacing: 2.1px;
-        line-height: 1.7px;
-      }
-    }
-
-    li:hover {
-      background: rgba(0, 0, 0, 0.6);
-    }
+  svg {
+    display: block;
   }
 }
