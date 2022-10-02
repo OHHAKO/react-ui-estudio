@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import styles from "./Layout.module.scss";
 import manul from "public/assets/pallas.png";
 import Head from "next/head";
@@ -38,25 +39,7 @@ export default function Layout({ children }: Props): React.ReactElement {
 
       <main>{children}</main>
 
-      <footer className={styles.footer}>
-        <ul>
-          <li>
-            <a href="https://github.com/OHHAKO" target="__blank">
-              Git
-            </a>
-          </li>
-          <li>
-            <a href="https://medium.com/@khk0503" target="__blank">
-              Medium
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com/kimhrkeon?igshid=YmMyMTA2M2Y=" target="__blank">
-              Instagram
-            </a>
-          </li>
-        </ul>
-      </footer>
+      <Footer />
     </>
   );
 }

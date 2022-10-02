@@ -1,0 +1,34 @@
+.footer {
+  padding: 32px;
+  background-color: black;
+
+  h1 {
+    margin-bottom: 12px;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 2.1px;
+  }
+
+  ul {
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: block;
+      margin-bottom: 14px;
+
+      a {
+        padding: 4px 12px 6px 0;
+        color: #a8a5a5;
+        font-size: 14px;
+        letter-spacing: 2.1px;
+        line-height: 1.7px;
+      }
+
+      a:hover {
+        color: white;
+      }
+    }
+  }
+}
