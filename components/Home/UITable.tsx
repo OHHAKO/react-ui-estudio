@@ -28,6 +28,10 @@ const UI_ITEM = [
     title: "Filter Data(Class component)",
     link: "filter-class",
   },
+  {
+    title: "scroll parallax",
+    link: "scroll-parallax",
+  },
 ];
 
 export default function UITable(): React.ReactElement {

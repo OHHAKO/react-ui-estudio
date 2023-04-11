@@ -27,6 +27,19 @@ export default function Layout({ children }: Props): React.ReactElement {
         </div>
       </header>
 
+      {/* <Parallax translateY={["0px", "500px"]}>
+        <div className={styles.blah2}>울ㄹ랄랄라</div>
+      </Parallax> */}
+      {/* <header className={styles.header}>
+        <h1 className={styles.title}>
+          <Link href="/">User interface estudio</Link>
+        </h1>
+        <div className={styles.imgWrapper}>
+          <Image src={manul} alt="picture" width={120} height={80} />
+          <span className={styles.author}>by Hako</span>
+        </div>
+      </header> */}
+
       <main>{children}</main>
 
       <footer className={styles.footer}>
