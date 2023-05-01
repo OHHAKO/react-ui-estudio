@@ -1,49 +1,20 @@
 import styles from "./UITable.module.scss";
+import { LinkItemType } from "types/link";
 import Link from "next/link";
 import React from "react";
 
-const UI_ITEM = [
-  { title: "Types of charts", link: "chart" },
-  {
-    title: "Sticky banner",
-    link: "scroll-sticky",
-  },
-  {
-    title: "Hidden banner on scrolling",
-    link: "scroll-hidden",
-  },
-  {
-    title: "Grabbing scrollY",
-    link: "grab-scroll-y",
-  },
-  {
-    title: "Grabbing scrollX",
-    link: "grab-scroll-x",
-  },
-  {
-    title: "Filter Data",
-    link: "filter",
-  },
-  {
-    title: "Filter Data(Class component)",
-    link: "filter-class",
-  },
-  {
-    title: "scroll parallax",
-    link: "scroll-parallax",
-  },
-];
+type Props = {
+  linkItems: LinkItemType[];
+};
 
-export default function UITable(): React.ReactElement {
+export default function UITable({ linkItems }: Props): React.ReactElement {
   return (
-    <section className={styles.section}>
-      <ul>
-        {UI_ITEM.map((item) => (
-          <li key={item.link}>
-            <Link href={"/" + item.link}>{item.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <ul className={styles.section}>
+      {linkItems.map((item) => (
+        <li key={item.link}>
+          <Link href={"/" + item.link}>{item.title}</Link>
+        </li>
+      ))}
+    </ul>
   );
 }
