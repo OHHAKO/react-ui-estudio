@@ -14,7 +14,7 @@ export default function Layout({ children }: Props): React.ReactElement {
   return (
     <>
       <Head>
-        <title>Hako Frontend Boilerplate</title>
+        <title>User interface esutido by hako</title>
         <link rel="icon" href="/assets/pallas.png" />
       </Head>
 
