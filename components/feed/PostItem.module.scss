@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 16px;
+  border-bottom: 1px solid rgba(192, 183, 183, 0.37);
+  list-style: none;
+
+  & > div {
+    width: 70%;
+  }
+
+  & > img {
+    width: 160px;
+    height: 100px;
+    border-radius: 7px;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgb(157, 153, 153);
+  font-size: 14px;
+
+  img {
+    margin-right: 8px;
+    border-radius: 13px;
+  }
+}
+
+.content {
+  overflow: hidden;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.publishAt {
+  margin: 4px 0 0;
+  color: gray;
+  font-size: 14px;
+}
