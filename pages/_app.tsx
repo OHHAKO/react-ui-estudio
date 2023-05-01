@@ -1,6 +1,5 @@
 import Layout from "components/layout/Layout";
 import type { AppProps } from "next/app";
-import Script from "next/script";
 import React from "react";
 
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -25,12 +24,12 @@ export default function JudgementSimulatorApp({
 }: AppProps): React.ReactElement {
   return (
     <>
-      <Script
+      <script
         id="web-json-ld"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
         }}
-      ></Script>
+      ></script>
       <ParallaxProvider>
         <Layout>
           <Component {...pageProps} />
